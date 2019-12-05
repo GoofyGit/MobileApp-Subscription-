@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project2Forms.Add">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+
+                <Label Text="Please Fill out the spaces below to save your subscription"
+                   Grid.Row="0" Grid.Column="0" />
+                
+                <Label Text="Name Of subscption"
+                   Grid.Row="1" Grid.Column="0" />
+                
+                <Entry Text="" x:Name="subName"
+                   Grid.Row="2" Grid.Column="0" />
+
+                <Label Text="Due Date"
+                   Grid.Row="3" Grid.Column="0" />
+
+                <DatePicker MinimumDate="2019, 6, 1"
+                    x:Name="dueDate"
+                    MaximumDate="2019, 6, 30"
+                    Date="{Binding SelectedDate}"
+                    Grid.Row="4" Grid.Column="0"/>
+
+                <Label Text="Amount"
+                   Grid.Row="5" Grid.Column="0" />
+
+                <Entry Text="" x:Name="amount"
+                   Grid.Row="6" Grid.Column="0" />
+
+                <Button Text="Save" Clicked="Button_Clicked"
+                    Grid.Row="7" Grid.Column="0" />
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
